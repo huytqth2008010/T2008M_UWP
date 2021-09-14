@@ -22,19 +22,59 @@ namespace T2008M_UWP.Pages.Lab
     /// </summary>
     public sealed partial class labs1 : Page
     {
+        public StackPanel allEmailsPanel;
+
         public labs1()
         {
             this.InitializeComponent();
-        }
+            allEmailsPanel = new StackPanel();
+            allEmailsPanel.HorizontalAlignment = HorizontalAlignment.Left;
+            allEmailsPanel.VerticalAlignment = VerticalAlignment.Top;
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        }
+        public Border GetMyBorder(int left, int top, int right, int bottom)
         {
-            string email = inputEmail.Text;
-            string title = inputTitle.Text;
-            string content = inputContent.Text;
-            txtEmail.Text = email;
-            txtTitle.Text = title;
-            txtContent.Text = content;
+            Border myBorder = new Border();
+            myBorder.BorderThickness = new Thickness(left, top, right, bottom);
+            myBorder.Padding = new Thickness(10);
+            myBorder.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Black);
+            return myBorder;
+        }
+        private void Button_Click(object sender, RoutedEventArgs e){
+            scrollViewer.HorizontalScrollBarVisibility = ScrollBarVisibility.Auto;
+
+            TextBlock email = new TextBlock();
+            TextBlock title = new TextBlock();
+            TextBlock content = new TextBlock();
+            email.TextWrapping = TextWrapping.Wrap;
+            title.TextWrapping = TextWrapping.Wrap;
+            content.TextWrapping = TextWrapping.Wrap;
+
+            email.Text = "Email Nhận: " + inputEmail.Text;
+            title.Text = "Tiêu đề: " + inputTitle.Text;
+            content.Text = "Nội dung: " + inputContent.Text;
+
+            StackPanel emailPanel = new StackPanel();
+            emailPanel.HorizontalAlignment = HorizontalAlignment.Left;
+            emailPanel.VerticalAlignment = VerticalAlignment.Top;
+            emailPanel.Margin = new Thickness(0, 0, 0, 20);
+
+            Border emailBorder = GetMyBorder(2, 2, 2, 0);
+            emailBorder.Child = email;
+            Border titleBorder = GetMyBorder(2, 2, 2, 0);
+            titleBorder.Child = title;
+            Border contentBorder = GetMyBorder(2, 2, 2, 2);
+            contentBorder.Child = content;
+            emailPanel.Children.Add(emailBorder);
+            emailPanel.Children.Add(titleBorder);
+            emailPanel.Children.Add(contentBorder);
+            emailPanel.Width = 500;
+
+
+            allEmailsPanel.Children.Insert(0, emailPanel);
+
+            scrollViewer.Content = allEmailsPanel;
         }
     }
 }

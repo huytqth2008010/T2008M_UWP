@@ -8,27 +8,24 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Height="540" VerticalAlignment="Center">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+    
+    <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="43*"/>
-            <ColumnDefinition Width="437*"/>
-            <ColumnDefinition Width="480*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,24">
-            <TextBlock HorizontalAlignment="Center" Margin="0,85,0,0" Text="Gửi thư" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
-            <TextBox x:Name="inputEmail" Margin="0,40,0,0" HorizontalAlignment="Center" Width="250" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="Email nhận ..."/>
-            <TextBox x:Name="inputTitle" Margin="0,40,0,0" HorizontalAlignment="Center" Width="250" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="Tiêu đề thư ... "/>
-            <TextBox x:Name="inputContent" Margin="0,40,0,0" HorizontalAlignment="Center" Width="250" Height="100" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="Nội dung thư ..."/>
-            <Button Click="Button_Click" Margin="0,40,0,0" HorizontalAlignment="Center" Width="200" Height="35" Content="Submit" VerticalAlignment="Top"/>
+        <StackPanel Grid.Column="0" Margin="0,-2,0,0">
+            <TextBlock HorizontalAlignment="Center" Margin="0,85,0,0" Text="Soạn Email" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+            <TextBox x:Name="inputEmail"  TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" Width="250" Height="35" PlaceholderText="Nhập email người nhận"/>
+            <TextBox x:Name="inputTitle" TextWrapping="Wrap" Width="250" Height="35" Margin="0,50,0,0" PlaceholderText="Tiêu đề" />
+            <TextBox x:Name="inputContent" Height="100" Width="250" Margin="0,50,0,0" PlaceholderText="Nội dung"/>
+            <Button Content="Gửi Email" Click="ButtonClick" Margin="0,50,0,0" Width="250" HorizontalAlignment="Center" Height="34"  />
+
+
         </StackPanel>
-        <StackPanel Grid.Column="2" Margin="0,0,0,24">
-            <TextBlock HorizontalAlignment="Center" Margin="0,85,0,0" Text="Thông tin gửi thư" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
-            <TextBlock x:Name="txtEmail"  HorizontalAlignment="Center" Margin="0,55,0,0" Text="Email nhận :" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.481,-0.987"/>
-            <TextBlock x:Name="txtTitle"  HorizontalAlignment="Center" Margin="0,55,0,0" Text="Tiêu đề thư :" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
-            <TextBlock x:Name="txtContent" HorizontalAlignment="Center" Margin="0,55,0,0" Text="Nội dung:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+        <StackPanel Grid.Column="1">
+            <TextBlock x:Name="txtTitle" HorizontalAlignment="Center" Margin="0,85,0,0" Text="Email đã gửi" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+            <ScrollViewer x:Name="scrollViewer" Height="600" Width="600" Margin="0,20,0,0" />
         </StackPanel>
     </Grid>
 </Page>
