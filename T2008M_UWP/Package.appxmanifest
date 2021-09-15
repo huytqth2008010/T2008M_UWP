@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="ec36e6b5-4129-4b4c-ba2c-405cfe861770"
-    Publisher="CN=GL65 Leopard"
+    Name="3337a3d4-bc9b-4342-9747-0736e0d3128f"
+    Publisher="CN=QuangHoa"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="ec36e6b5-4129-4b4c-ba2c-405cfe861770" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="3337a3d4-bc9b-4342-9747-0736e0d3128f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>T2008M_UWP</DisplayName>
-    <PublisherDisplayName>GL65 Leopard</PublisherDisplayName>
+    <PublisherDisplayName>QuangHoa</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
