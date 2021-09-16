@@ -18,7 +18,7 @@
             <TextBox x:Name="inputEmail"  TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" Width="250" Height="35" PlaceholderText="Nhập email người nhận"/>
             <TextBox x:Name="inputTitle" TextWrapping="Wrap" Width="250" Height="35" Margin="0,50,0,0" PlaceholderText="Tiêu đề" />
             <TextBox x:Name="inputContent" Height="100" Width="250" Margin="0,50,0,0" PlaceholderText="Nội dung"/>
-            <Button Content="Gửi Email" Click="ButtonClick" Margin="0,50,0,0" Width="250" HorizontalAlignment="Center" Height="34"  />
+            <Button Content="Gửi Email" Click="Button_Click" Margin="0,50,0,0" Width="250" HorizontalAlignment="Center" Height="34"  />
 
 
         </StackPanel>
