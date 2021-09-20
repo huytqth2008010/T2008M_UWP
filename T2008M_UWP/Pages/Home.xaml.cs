@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using T2008M_UWP.Models;
+using Windows.UI.Xaml.Media.Imaging;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,7 +27,15 @@ namespace T2008M_UWP.Pages
         public Home()
         {
             this.InitializeComponent();
-            MainPage._mainFrame.Navigate(typeof(Pages.PersonInfomation));
+            //MainPage._mainFrame.Navigate(typeof(Pages.PersonInfomation));
+            GV.Items.Add(new Email() { Mail = "quanghoa@gmail.com", Img = new BitmapImage(new Uri("https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/cache/584039753b87a8d227764e04fc461e3e/h/a/hawaii_burger_1_2.jpg")) });
+            GV.Items.Add(new Email() { Mail = "quanghoa1@gmail.com", Img = new BitmapImage(new Uri("https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/cache/584039753b87a8d227764e04fc461e3e/h/a/hawaii_burger_1_2.jpg")) });
+            GV.Items.Add(new Email() { Mail = "quanghoa2@gmail.com", Img = new BitmapImage(new Uri("https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/cache/584039753b87a8d227764e04fc461e3e/h/a/hawaii_burger_1_2.jpg")) });
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e) // hàm này thực thi khi có sự kieenn navigate đến page nay
+        {
+            MenuItem item = e.Parameter as MenuItem;
+            Title.Text = item.Name;
         }
     }
 }

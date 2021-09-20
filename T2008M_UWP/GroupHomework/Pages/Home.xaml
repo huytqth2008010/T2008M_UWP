@@ -1,0 +1,80 @@
+﻿<Page
+    x:Class="T2008M_UWP.GroupHomework.Home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T2008M_UWP.GroupHomework"
+    xmlns:model="using:T2008M_UWP.GroupHomework.Models"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <RelativePanel>
+            <Rectangle  Height="10" Width="1200" Fill="Red" />
+            <Rectangle  Height="170" Width="150" Fill="Red" Margin="20,0,0,0"/>
+            <Image Height="168" Width="149" Source="/GroupHomework/Images/LogoJB_New-02.png" Margin="20,0,0,0"/>
+            <TextBlock Text="C# UI Designing By SaLaaR HuSceyN" TextWrapping="Wrap" Width="491" FontSize="25" Margin="200,20,0,0" Foreground="Black"/>
+        </RelativePanel>
+        <ItemsControl Margin="0,20,250,0" HorizontalAlignment="Right">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid MaximumRowsOrColumns="1"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <Image Source="/GroupHomework/Images/facebook.png" Height="40" Width="40" Margin="10,0,0,0"/>
+            <Image Source="/GroupHomework/Images/chim.png" Height="40" Width="40" Margin="10,0,0,0"/>
+            <Image Source="/GroupHomework/Images/intas.png" Height="40" Width="40" Margin="10,0,0,0"/>
+        </ItemsControl>
+        <ItemsControl Margin="0,20,20,0" HorizontalAlignment="Right">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid MaximumRowsOrColumns="1"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <Image Source="/GroupHomework/Images/chuong.png" Height="40" Width="40" Margin="10,0,0,0"/>
+            <Image Source="/GroupHomework/Images/settings-3110.png"  Height="35" Width="35" Margin="10,0,0,0"/>
+            <Image Source="/GroupHomework/Images/tat.png" Height="40" Width="40" Margin="10,0,0,0"/>
+        </ItemsControl>
+        <GridView x:Name="GV" Margin="20,250,0,0">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="model:Homes">
+                    <StackPanel BorderBrush="#E2E2E2">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Width="500">
+                                <TextBlock Text="{x:Bind Title1}" FontSize="25" Foreground="#F8AD00" Margin="30,0,0,0"/>
+                                <TextBlock Text="{x:Bind Price}" FontSize="140" Foreground="#F8AD00" Margin="60,-30,0,0"/>
+                                <TextBlock Text="{x:Bind Name}" FontSize="25" Foreground="Black" FontWeight="ExtraBlack" Margin="60,0,0,0"/>
+                                <TextBlock Text="{x:Bind Title2}" FontSize="25" Foreground="Black" Margin="60,0,0,0"/>
+                                <TextBlock Text="{x:Bind Title3}" 
+                                   FontSize="16"
+                                   Foreground="Black" 
+                                   Padding="10" 
+                                  Margin="60,0,0,0"
+                                  TextWrapping="Wrap" 
+                                  TextTrimming="WordEllipsis" 
+                                  LineStackingStrategy="BlockLineHeight"
+                               />
+                                <Button Content="Order Now" Click="Button_Click_Order" Background="#FBBC04" Width="420" Margin="60,0,0,0" RequestedTheme="Light"/>
+                            </StackPanel>
+                            <Image Width="500" Grid.Column="1" >
+                                <Image.Source>
+                                    <BitmapImage  UriSource="{x:Bind Img.UriSource}" />
+                                </Image.Source>
+                            </Image>
+                        </Grid>
+                      
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+
+</Page>

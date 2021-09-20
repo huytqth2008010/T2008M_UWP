@@ -20,6 +20,7 @@
             <TextBlock HorizontalAlignment="Center" Margin="0,85,0,0" Text="Thu Thập thông tin" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
             <TextBox x:Name="inputMail" HorizontalAlignment="Center" Width="250" Height="35" Margin="0,50,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="Mail"/>
             <TextBox x:Name="inputSubject" HorizontalAlignment="Center" Width="250" Height="35" Margin="0,50,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="Subject"/>
+            <DatePicker Header="SenDate" x:Name="inputDate"  HorizontalAlignment="Center" Width="300" Height="70" Margin="0,70,0,0"/>
             <TextBox  x:Name="inputContent" HorizontalAlignment="Center" Width="250" Height="100" Margin="0,50,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="Content"/>
             <TextBlock x:Name="errors" HorizontalAlignment="Center" Margin="0,50,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="Red"/>
             <Button Click="Button_Click" HorizontalAlignment="Center" Width="250" Height="35" Margin="0,50,0,0" Content="Gửi thông tin"/>

@@ -119,6 +119,38 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GroupHomework\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupHomework\Models\Conllections.cs" />
+    <Compile Include="GroupHomework\Models\Customers.cs" />
+    <Compile Include="GroupHomework\Models\Deliverys.cs" />
+    <Compile Include="GroupHomework\Models\DriverPayMents.cs" />
+    <Compile Include="GroupHomework\Models\EatIns.cs" />
+    <Compile Include="GroupHomework\Models\Homes.cs" />
+    <Compile Include="GroupHomework\Models\MenuItem.cs" />
+    <Compile Include="GroupHomework\Models\TekeAways.cs" />
+    <Compile Include="GroupHomework\Pages\Collection.xaml.cs">
+      <DependentUpon>Collection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupHomework\Pages\Customers.xaml.cs">
+      <DependentUpon>Customers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupHomework\Pages\Delivery.xaml.cs">
+      <DependentUpon>Delivery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupHomework\Pages\DriverPayMent.xaml.cs">
+      <DependentUpon>DriverPayMent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupHomework\Pages\EatIn.xaml.cs">
+      <DependentUpon>EatIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupHomework\Pages\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupHomework\Pages\TakeAway.xaml.cs">
+      <DependentUpon>TakeAway.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -163,6 +195,13 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GroupHomework\Images\chim.png" />
+    <Content Include="GroupHomework\Images\chuong.png" />
+    <Content Include="GroupHomework\Images\facebook.png" />
+    <Content Include="GroupHomework\Images\intas.png" />
+    <Content Include="GroupHomework\Images\LogoJB_New-02.png" />
+    <Content Include="GroupHomework\Images\settings-3110.png" />
+    <Content Include="GroupHomework\Images\tat.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -177,6 +216,38 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="GroupHomework\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupHomework\Pages\Collection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupHomework\Pages\Customers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupHomework\Pages\Delivery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupHomework\Pages\DriverPayMent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupHomework\Pages\EatIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupHomework\Pages\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupHomework\Pages\TakeAway.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

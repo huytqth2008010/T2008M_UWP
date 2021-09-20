@@ -47,8 +47,10 @@ namespace T2008M_UWP
 
         private void Menu_Loaded(object sender, RoutedEventArgs e)
         {
-            var item1 = new MenuItem() { Name = "Home", MenuPage = "home" };
-            var item2 = new MenuItem() { Name = "Person Infomation", MenuPage = "pi" };
+            var item1 = new MenuItem() { Name = "Home", MenuPage = "home", Icon = "\uE80F" };
+            var item2 = new MenuItem() { Name = "Person Infomation", MenuPage = "pi", Icon = "\uE946" };
+            // Gia su co 1 danh sach category
+            // new MenuItem() { Name = "Ten cua category", MenuPage = "category", Icon = "\uE946" };
             Menu.Items.Add(item1);
             Menu.Items.Add(item2);
         }
@@ -58,8 +60,9 @@ namespace T2008M_UWP
             MenuItem selectedItem = (MenuItem)Menu.SelectedItem;
             switch (selectedItem.MenuPage)
             {
-                case "home": MainFrame.Navigate(typeof(Pages.Home)); break;
+                case "home": MainFrame.Navigate(typeof(Pages.Home), selectedItem); break; // Page
                 case "pi": MainFrame.Navigate(typeof(Pages.PersonInfomation)); break;
+                    //case "category": MainFrame.Navigate(typeof(Pages.Category),category); break;
             }
         }
     }

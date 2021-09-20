@@ -39,7 +39,8 @@ namespace T2008M_UWP.Pages
             {
                 errors.Text = "";
                 //  string txt = inputMail.Text + "--" + inputSubject.Text + "\n --------------------------------------";
-                var m = new Email() { Mail = inputMail.Text, Subject = inputSubject.Text, Content = inputContent.Text };
+                var sendDate = inputDate.SelectedDate.Value.DateTime;
+                var m = new Email() { Mail = inputMail.Text, Subject = inputSubject.Text, Content = inputContent.Text, SendTime = sendDate };
                 mails.Add(m) ;
                 PrintMails();
                 inputMail.Text = "";
@@ -54,7 +55,7 @@ namespace T2008M_UWP.Pages
             txtMail.Text = "";
             foreach(Email m in mails)
             {
-                txtMail.Text += m.Mail+"--"+m.Subject+"\n-------------";
+                txtMail.Text += m.Mail+"--"+m.Subject+"---"+m.SendTime+"\n-------------";
             }
         }
     }
