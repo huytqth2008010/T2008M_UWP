@@ -14,31 +14,34 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <RelativePanel>
-            <Rectangle  Height="10" Width="1200" Fill="Red" />
-            <Rectangle  Height="170" Width="150" Fill="Red" Margin="20,0,0,0"/>
-            <Image Height="168" Width="149" Source="/GroupHomework/Images/LogoJB_New-02.png" Margin="20,0,0,0"/>
-            <TextBlock Text="C# UI Designing By SaLaaR HuSceyN" TextWrapping="Wrap" Width="491" FontSize="25" Margin="200,20,0,0" Foreground="Black"/>
+            <RelativePanel>
+                <Rectangle  Height="10" Width="1200" Fill="#FFB80432" />
+                <Rectangle  Height="170" Width="150" Fill="#FFB80432" Margin="20,0,0,0"/>
+                <Image Height="168" Width="149" Source="/GroupHomework/Images/LogoJB_New-02.png" Margin="20,0,0,0" FocusVisualSecondaryBrush="#99000000"/>
+                <TextBlock Text="C# UI Designing By SaLaaR HuSceyN" TextWrapping="Wrap" Width="491" FontSize="25" Margin="200,20,0,0" Foreground="Black"/>
+                <Grid RelativePanel.AlignRightWithPanel="True" Margin="0,20,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="/GroupHomework/Images/facebook.png" Height="40" Width="40" Grid.Column="0" Margin="10,0,0,0"/>
+                    <Image Source="/GroupHomework/Images/chim.png" Height="40" Width="40" Grid.Column="1" Margin="10,0,0,0"/>
+                    <Image Source="/GroupHomework/Images/intas.png" Height="40" Width="40" Grid.Column="2" Margin="10,0,70,0"/>
+                    <Image Source="/GroupHomework/Images/chuong.png" Height="40" Width="40" Grid.Column="3" Margin="10,0,0,0"/>
+                    <Image Source="/GroupHomework/Images/settings-3110.png"  Height="35" Grid.Column="4" Width="35" Margin="10,0,0,0"/>
+                    <Image Source="/GroupHomework/Images/tat.png" Height="40" Width="40" Grid.Column="5" Margin="10,0,20,0"/>
+                </Grid>
+            </RelativePanel>
         </RelativePanel>
-        <ItemsControl Margin="0,20,250,0" HorizontalAlignment="Right">
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <ItemsWrapGrid MaximumRowsOrColumns="1"/>
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-            <Image Source="/GroupHomework/Images/facebook.png" Height="40" Width="40" Margin="10,0,0,0"/>
-            <Image Source="/GroupHomework/Images/chim.png" Height="40" Width="40" Margin="10,0,0,0"/>
-            <Image Source="/GroupHomework/Images/intas.png" Height="40" Width="40" Margin="10,0,0,0"/>
-        </ItemsControl>
-        <ItemsControl Margin="0,20,20,0" HorizontalAlignment="Right">
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <ItemsWrapGrid MaximumRowsOrColumns="1"/>
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-            <Image Source="/GroupHomework/Images/chuong.png" Height="40" Width="40" Margin="10,0,0,0"/>
-            <Image Source="/GroupHomework/Images/settings-3110.png"  Height="35" Width="35" Margin="10,0,0,0"/>
-            <Image Source="/GroupHomework/Images/tat.png" Height="40" Width="40" Margin="10,0,0,0"/>
-        </ItemsControl>
+      
         <GridView x:Name="GV" Margin="20,250,0,0">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="model:Homes">
