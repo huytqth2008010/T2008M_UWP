@@ -13,8 +13,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <RelativePanel>
-            <RelativePanel>
+         <RelativePanel>
                 <Rectangle  Height="10" Width="1200" Fill="#FFB80432" />
                 <Rectangle  Height="170" Width="150" Fill="#FFB80432" Margin="20,0,0,0"/>
                 <Image Height="168" Width="149" Source="/GroupHomework/Images/LogoJB_New-02.png" Margin="20,0,0,0" FocusVisualSecondaryBrush="#99000000"/>
@@ -40,11 +39,10 @@
                     <Image Source="/GroupHomework/Images/tat.png" Height="40" Width="40" Grid.Column="5" Margin="10,0,20,0"/>
                 </Grid>
             </RelativePanel>
-        </RelativePanel>
-      
-        <GridView x:Name="GV" Margin="20,250,0,0">
+
+        <GridView  x:Name="GV" Margin="20,250,0,0">
             <GridView.ItemTemplate>
-                <DataTemplate x:DataType="model:Homes">
+                <DataTemplate x:DataType="model:Homes" >
                     <StackPanel BorderBrush="#E2E2E2">
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -73,7 +71,6 @@
                                 </Image.Source>
                             </Image>
                         </Grid>
-                      
                     </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>

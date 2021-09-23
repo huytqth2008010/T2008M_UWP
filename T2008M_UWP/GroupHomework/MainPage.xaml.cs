@@ -63,6 +63,7 @@ namespace T2008M_UWP.GroupHomework
             Menu.Items.Add(item5);
             Menu.Items.Add(item6);
             Menu.Items.Add(item7);
+          
         }
 
         private void ListViewItem_Tapped(object sender, TappedRoutedEventArgs e)
@@ -80,5 +81,6 @@ namespace T2008M_UWP.GroupHomework
                     //case "category": MainFrame.Navigate(typeof(Pages.Category),category); break;
             }
         }
+       
     }
 }
